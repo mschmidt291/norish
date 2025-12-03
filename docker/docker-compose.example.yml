@@ -25,10 +25,10 @@ services:
       # FIRST USER SETUP
       # ─────────────────────────────────────────────────────────────────────────
       # On first startup, configure ONE auth provider below to create your admin account.
-      # After first login, use Settings → Admin to configure additional providers,
+      # After first login, use Settings => Admin to configure additional providers,
       # AI settings, video parsing, and all other options.
       
-      # Option 1=Password auth - basic auth with email/password
+      # Option 1: Password auth - basic auth with email/password
       # If not set defaults to disabled if OIDC or OAuth is configured.
       # Defaults to true if no other auth providers are configured.
       #PASSWORD_AUTH_ENABLED=false # Enable/disable password auth default: false
