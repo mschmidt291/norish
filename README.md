@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/mikevanes/Norish/blob/main/LICENSE"><img src="https://img.shields.io/github/license/mikevanes/Norish?style=for-the-badge" alt="License" /></a>
-  <a href="https://github.com/mikevanes/Norish/actions"><img src="https://img.shields.io/github/actions/workflow/status/mikevanes/Norish/release-build.yml?style=for-the-badge&logo=github" alt="Build Status" /></a>
+  <a href="https://github.com/norish-recipes/Norish/blob/main/LICENSE"><img src="https://img.shields.io/github/license/norish-recipes/Norish?style=for-the-badge" alt="License" /></a>
+  <a href="https://github.com/norish-recipes/Norish/actions"><img src="https://img.shields.io/github/actions/workflow/status/norish-recipes/Norish/release-build.yml?style=for-the-badge&logo=github" alt="Build Status" /></a>
   <a href="https://hub.docker.com/r/norishapp/norish"><img src="https://img.shields.io/docker/pulls/norishapp/norish?style=for-the-badge&logo=docker" alt="Docker Pulls" /></a>
   <a href="https://hub.docker.com/r/norishapp/norish"><img src="https://img.shields.io/docker/image-size/norishapp/norish?style=for-the-badge&logo=docker" alt="Docker Image Size" /></a>
   <a href="https://buymeacoffee.com/mikevanes"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me a Coffee" /></a>
