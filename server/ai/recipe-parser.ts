@@ -60,11 +60,11 @@ function extractSanitizedBody(html: string): string {
   }
 }
 
-function buildExtractionPrompt(url: string | undefined, html: string): string {
+async function buildExtractionPrompt(url: string | undefined, html: string): Promise<string> {
   const sanitized = extractSanitizedBody(html);
   const truncated = sanitized.slice(0, 50000);
 
-  const prompt = loadPrompt("recipe-extraction");
+  const prompt = await loadPrompt("recipe-extraction");
 
   return `${prompt}
 ${url ? `URL: ${url}\n` : ""}
@@ -88,7 +88,7 @@ export async function extractRecipeWithAI(
   aiLogger.info({ url }, "Starting AI recipe extraction");
 
   const provider = await getAIProvider();
-  const prompt = buildExtractionPrompt(url, html);
+  const prompt = await buildExtractionPrompt(url, html);
 
   aiLogger.debug({ url, promptLength: prompt.length }, "Sending prompt to AI provider");
 

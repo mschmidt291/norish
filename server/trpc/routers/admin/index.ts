@@ -4,7 +4,7 @@ import { adminConfigProcedures } from "./config";
 import { registrationProcedures } from "./registration";
 import { authProvidersProcedures } from "./auth-providers";
 import { contentConfigProcedures } from "./content-config";
-import { aiVideoProcedures } from "./ai-video";
+import { aiVideoProcedures, promptsProcedures } from "./ai-video";
 import { permissionsProcedures } from "./permissions";
 import { systemProcedures } from "./system";
 
@@ -23,6 +23,9 @@ export const adminRouter = router({
 
   // AI and video
   ...aiVideoProcedures._def.procedures,
+
+  // AI prompts
+  prompts: promptsProcedures,
 
   // Permissions (recipe policy)
   ...permissionsProcedures._def.procedures,
