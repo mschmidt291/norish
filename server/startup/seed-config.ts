@@ -1,6 +1,3 @@
-import { readFileSync } from "fs";
-import { join } from "path";
-
 import { setConfig, configExists, getConfig, deleteConfig } from "../db/repositories/server-config";
 import {
   ServerConfigKeys,
@@ -18,13 +15,19 @@ import defaultUnits from "@/config/units.default.json";
 import defaultContentIndicators from "@/config/content-indicators.default.json";
 import defaultRecurrenceConfig from "@/config/recurrence-config.default.json";
 
-const PROMPTS_DIR = join(process.cwd(), "server", "ai", "prompts");
-
 /**
  * Load default prompt content from file
+ * Uses dynamic require to avoid issues with browser environments in tests
  */
 function loadDefaultPromptFromFile(name: string): string {
-  const filePath = join(PROMPTS_DIR, `${name}.txt`);
+  // Dynamic imports to avoid browser environment issues in tests
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { readFileSync } = require("fs");
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { join } = require("path");
+
+  const promptsDir = join(process.cwd(), "server", "ai", "prompts");
+  const filePath = join(promptsDir, `${name}.txt`);
 
   return readFileSync(filePath, "utf-8");
 }
